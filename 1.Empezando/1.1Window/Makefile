@@ -27,17 +27,17 @@ endef
 ### CONFIG
 ##################################################
 
-APP 						:= program
-CFLAGS 					:= -Wall -Wextra -pedantic
-CCFLAGS 				:= $(CFLAGS) -std=c++17
-CC 							:= g++
-C 							:= gcc
-MKDIR 					:= mkdir -p
-SRC 						:= src
-OBJ 						:= obj
-LIBDIR          := ../../lib/glad
-LIBS 						:= -L$(LIBDIR) -lglad -lglfw
-INCDIRS 				:= -I$(SRC) -I$(LIBDIR)/src
+APP             := program
+CFLAGS          := -Wall -Wextra -pedantic
+CCFLAGS         := $(CFLAGS) -std=c++17
+CC              := g++
+C               := gcc
+MKDIR           := mkdir -p
+SRC             := src
+OBJ             := obj
+LIBGLAD         := ../../lib/glad
+LIBS            := -L$(LIBGLAD) -lglad -lglfw
+INCDIRS         := -I$(SRC) -I$(LIBGLAD)/src
 
 ifdef DEBUG
 	CCFLAGS += -g
